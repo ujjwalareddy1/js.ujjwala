@@ -1,0 +1,47 @@
+// create a variable to hold your kitchen kit items
+const kitchenKits = []
+
+// this function will take in some values as parameters, create a
+// kitchen kit object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+
+function addKitchenKit(itemName, material, color, brand) {
+   const kitchenKit = {
+      "itemName": itemName,
+      "material": material,
+      "color": color,
+      "brand": brand
+   }    
+   kitchenKits.push(kitchenKit)
+   console.log("Added: " + itemName);
+}
+
+// create a "loop" that will go through an "array" of kitchen kits 
+// and print their metadata with console.log()
+
+function listKitchenKits() {
+   for (let i = 0; i < kitchenKits.length; i++) {
+      console.log("\nID: \t\t" + (i + 1));
+      console.log("Item Name: \t" + kitchenKits[i].itemName); 
+      console.log("Material: \t" + kitchenKits[i].material);
+      console.log("Color: \t\t" + kitchenKits[i].color);
+      console.log("Brand: \t\t" + kitchenKits[i].brand);
+   }
+}
+
+// print the total number of kitchen kits we have added to the console
+
+function getTotalSupply() {
+   console.log("\nTotal Kitchen Kits: " + kitchenKits.length);
+}
+
+// call your functions below this line
+
+addKitchenKit("Chef Knife", "Stainless Steel", "Silver", "Global");
+addKitchenKit("Cutting Board", "Bamboo", "Brown", "OXO");
+addKitchenKit("Frying Pan", "Cast Iron", "Black", "Lodge");
+addKitchenKit("Mixing Bowl", "Glass", "Transparent", "Pyrex");
+addKitchenKit("Spatula", "Silicone", "Red", "OXO");
+
+listKitchenKits();
+getTotalSupply();
